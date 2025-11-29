@@ -1,0 +1,83 @@
+---
+import { siteConfig } from "@/config/site";
+import { cn } from "@/lib/utils";
+
+type Props = {
+  className?: string;
+};
+
+const { className } = Astro.props;
+---
+
+<header
+  class={cn(
+    "flex items-center h-12 md:h-14 z-50 sticky top-0 header-bg text-white",
+    className
+  )}
+>
+  <div class="absolute inset-0 header-gradient"></div>
+  <div class="absolute inset-0 header-pattern"></div>
+
+  <div class="relative flex items-center justify-between w-full px-4 md:px-6 z-10">
+    <div class="flex items-center gap-6 md:gap-8 lg:gap-10">
+      <a href="/" class="hidden items-center space-x-2 md:flex hover:opacity-90 transition-opacity">
+        <span class="hidden font-bold sm:inline-block header-title">
+          {siteConfig.name}
+        </span>
+      </a>
+
+      <slot name="mobile-nav-header" />
+
+      <div class="hidden md:flex">
+        <slot name="left-header" />
+      </div>
+
+      <slot name="left-actions" />
+    </div>
+
+
+    <slot name="right-header" />
+  </div>
+</header>
+
+<style>
+  .header-bg {
+    background: #192F59;
+  }
+
+  .header-gradient {
+    background: linear-gradient(
+      135deg,
+      rgba(255, 255, 255, 0.08) 0%,
+      transparent 50%,
+      rgba(255, 255, 255, 0.04) 100%
+    );
+  }
+
+  .header-pattern {
+    background-image:
+      radial-gradient(circle at 20% 50%, rgba(255, 255, 255, 0.06) 0%, transparent 50%),
+      radial-gradient(circle at 80% 80%, rgba(255, 255, 255, 0.04) 0%, transparent 50%);
+    background-size: 100% 100%;
+  }
+
+  /* Hide the original text */
+  .header-title {
+    font-size: 0;
+    color: white;
+  }
+
+  .header-title::before {
+    content: 'Markdown Live Preview - ';
+    color: white;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+
+  .header-title::after {
+    content: 'IngeniousClan';
+    color: #ffcc66;
+    font-size: 1rem;
+    font-weight: 700;
+  }
+</style>

@@ -1,0 +1,26 @@
+{
+  "projects": [
+    {
+      "id": "medusa-plugins",
+      "title": "Medusa Plugins",
+      "description": "A comprehensive collection of powerful plugins for Medusa e-commerce platform, extending functionality and enhancing your online store capabilities.",
+      "url": "https://medusa.plugins.ingeniousclan.com",
+      "status": "live",
+      "category": "E-commerce",
+      "tags": ["Medusa", "Plugins", "E-commerce", "Backend"],
+      "icon": "lucide:package",
+      "gradient": "from-blue-500 to-cyan-500"
+    },
+    {
+      "id": "react-learn",
+      "title": "React Learning Hub",
+      "description": "An interactive learning platform designed to help developers master React through hands-on examples, tutorials, and real-world projects.",
+      "url": "https://react.learn.ingeniousclan.com",
+      "status": "live",
+      "category": "Education",
+      "tags": ["React", "Learning", "Tutorial", "Frontend"],
+      "icon": "lucide:book-open",
+      "gradient": "from-purple-500 to-pink-500"
+    }
+  ]
+}

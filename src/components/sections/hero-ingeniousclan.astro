@@ -1,0 +1,138 @@
+---
+import { buttonVariants } from "@/components/ui/button";
+import { cn } from "@/lib/utils";
+import { Icon } from "astro-icon/components";
+---
+
+<section class="relative space-y-6 overflow-hidden py-12 sm:py-20 lg:py-24">
+  <!-- Background gradient effects -->
+  <div class="absolute inset-0 -z-10 overflow-hidden">
+    <div class="absolute left-1/2 top-0 h-[500px] w-[500px] -translate-x-1/2 rounded-full bg-gradient-to-b from-indigo-500/20 to-purple-500/20 opacity-50 blur-3xl dark:opacity-30"></div>
+    <div class="absolute right-1/4 top-1/3 h-[300px] w-[300px] rounded-full bg-gradient-to-b from-purple-500/15 to-pink-500/15 opacity-40 blur-3xl dark:opacity-20"></div>
+  </div>
+
+  <div class="container flex max-w-6xl flex-col items-center gap-8 text-center">
+    <!-- Brand Badge -->
+    <a
+      href="#learn-more"
+      class={cn(
+        buttonVariants({ variant: "outline", size: "sm", rounded: "full" }),
+        "gap-2 border-border/40 backdrop-blur-sm transition-all hover:scale-105"
+      )}
+    >
+      <span class="text-xl" aria-hidden="true">🌀</span>
+      <span class="font-semibold">IngeniousClan Hub</span>
+      <Icon name="lucide:arrow-right" class="size-3.5 transition-transform group-hover:translate-x-1" />
+    </a>
+
+    <!-- Main Heading -->
+    <h1 class="text-balance font-heading text-4xl sm:text-5xl md:text-6xl lg:text-[72px] leading-tight">
+      Empowering developers.
+      <br />
+      <span class="text-gradient_indigo-purple font-extrabold">Fueling innovation.</span>
+    </h1>
+
+    <!-- Subheading -->
+    <p class="max-w-3xl text-balance text-lg leading-relaxed text-muted-foreground sm:text-xl sm:leading-8">
+      IngeniousClan is more than a collection of projects — it's a <strong class="font-semibold text-foreground">movement to empower developers worldwide</strong>.
+      Through the IngeniousClan Hub, we bring together everything needed to learn, build, and innovate — all in one place.
+    </p>
+
+    <!-- Vision Statement -->
+    <div class="mx-auto max-w-2xl rounded-2xl border border-border/50 bg-muted/30 p-6 backdrop-blur-sm">
+      <div class="mb-3 flex items-center justify-center gap-2">
+        <Icon name="lucide:target" class="size-5 text-indigo-500" />
+        <h2 class="font-heading text-xl font-semibold">Our Vision</h2>
+      </div>
+      <p class="text-balance text-base leading-relaxed text-muted-foreground">
+        To empower developers to <strong class="font-semibold text-foreground">learn, build, and innovate without limits</strong>.
+        A world where every developer has access to the knowledge, tools, and platforms needed to bring ideas to life and shape the future of technology.
+      </p>
+    </div>
+
+    <!-- CTA Buttons -->
+    <div class="flex flex-col items-center justify-center gap-3 sm:flex-row sm:gap-4">
+      <a
+        href="/hub"
+        class={cn(
+          buttonVariants({ size: "lg", rounded: "full" }),
+          "gap-2 px-8 shadow-lg transition-all hover:scale-105 hover:shadow-xl"
+        )}
+      >
+        <Icon name="lucide:rocket" class="size-5" />
+        <span class="font-semibold">Explore the Hub</span>
+        <Icon name="lucide:arrow-right" class="size-4" />
+      </a>
+
+      <a
+        href="https://github.com/ingeniousclan"
+        target="_blank"
+        rel="noopener noreferrer"
+        class={cn(
+          buttonVariants({ variant: "outline", size: "lg", rounded: "full" }),
+          "gap-2 px-8 backdrop-blur-sm transition-all hover:scale-105"
+        )}
+      >
+        <Icon name="lucide:github" class="size-5" />
+        <span class="font-semibold">GitHub</span>
+        <Icon name="lucide:external-link" class="size-3.5" />
+      </a>
+    </div>
+
+    <!-- Mission Statement -->
+    <div class="mt-8 max-w-4xl">
+      <div class="mb-4 flex items-center justify-center gap-2">
+        <Icon name="lucide:compass" class="size-5 text-purple-500" />
+        <h2 class="font-heading text-xl font-semibold">Our Mission</h2>
+      </div>
+      <p class="text-balance text-base leading-relaxed text-muted-foreground">
+        To create a connected ecosystem of <strong class="font-semibold text-foreground">learning platforms, developer tools, and innovation frameworks</strong> that make building modern digital experiences faster, simpler, and more accessible to everyone.
+      </p>
+    </div>
+
+    <!-- Stats/Features Grid -->
+    <div class="mt-12 grid w-full max-w-5xl gap-6 sm:grid-cols-2 lg:grid-cols-3">
+      <!-- Learn -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border/50 bg-background/50 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:border-indigo-500/50 hover:shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-br from-indigo-500/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+        <div class="relative flex flex-col items-center gap-3 text-center">
+          <div class="flex size-12 items-center justify-center rounded-xl border border-border bg-background shadow-sm">
+            <Icon name="lucide:graduation-cap" class="size-6 text-indigo-500" />
+          </div>
+          <h3 class="font-heading text-xl font-semibold">Learn</h3>
+          <p class="text-sm text-muted-foreground">
+            Access comprehensive learning resources and documentation
+          </p>
+        </div>
+      </div>
+
+      <!-- Build -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border/50 bg-background/50 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:border-purple-500/50 hover:shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-br from-purple-500/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+        <div class="relative flex flex-col items-center gap-3 text-center">
+          <div class="flex size-12 items-center justify-center rounded-xl border border-border bg-background shadow-sm">
+            <Icon name="lucide:code-2" class="size-6 text-purple-500" />
+          </div>
+          <h3 class="font-heading text-xl font-semibold">Build</h3>
+          <p class="text-sm text-muted-foreground">
+            Leverage powerful tools and frameworks for rapid development
+          </p>
+        </div>
+      </div>
+
+      <!-- Innovate -->
+      <div class="group relative overflow-hidden rounded-2xl border border-border/50 bg-background/50 p-6 backdrop-blur-sm transition-all hover:scale-105 hover:border-pink-500/50 hover:shadow-lg sm:col-span-2 lg:col-span-1 lg:shadow-lg">
+        <div class="absolute inset-0 bg-gradient-to-br from-pink-500/10 to-transparent opacity-0 transition-opacity group-hover:opacity-100"></div>
+        <div class="relative flex flex-col items-center gap-3 text-center">
+          <div class="flex size-12 items-center justify-center rounded-xl border border-border bg-background shadow-sm">
+            <Icon name="lucide:sparkles" class="size-6 text-pink-500" />
+          </div>
+          <h3 class="font-heading text-xl font-semibold">Innovate</h3>
+          <p class="text-sm text-muted-foreground">
+            Shape the future of technology with cutting-edge solutions
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
