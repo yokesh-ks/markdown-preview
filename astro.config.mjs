@@ -9,7 +9,7 @@ import { defineConfig } from "astro/config";
 // https://astro.build/config
 export default defineConfig({
   site: "http://ingeniousclan.com",
-  output: "hybrid",
+  output: "static",
   integrations: [
     mdx({
       syntaxHighlight: "shiki",
@@ -25,10 +25,5 @@ export default defineConfig({
       applyBaseStyles: false,
     }),
   ],
-  image: {
-    service: {
-      entrypoint: "astro/assets/services/noop",
-    },
-  },
   adapter: cloudflare(),
 });
