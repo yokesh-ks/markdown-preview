@@ -58,6 +58,7 @@
     "@tailwindcss/typography": "^0.5.13",
     "mdast-util-toc": "^7.1.0",
     "remark": "^15.0.1",
-    "unist-util-visit": "^5.0.0"
+    "unist-util-visit": "^5.0.0",
+    "wrangler": "^4.61.1"
   }
 }
