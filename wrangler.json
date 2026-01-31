@@ -1,6 +1,5 @@
 {
   "name": "markdown-preview",
-  "account_id": "39ec7ef3a29d6fab5ab6e6fc7fd067af",
   "compatibility_date": "2024-09-23",
   "compatibility_flags": ["nodejs_compat"],
   "pages_build_output_dir": "./dist"
